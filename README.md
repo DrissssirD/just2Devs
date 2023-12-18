@@ -1,5 +1,5 @@
 # just2Devs
-# Introduction to Student Project Collaboration
+# Introduction to this Collaboration
 
 ## Welcome!
 
