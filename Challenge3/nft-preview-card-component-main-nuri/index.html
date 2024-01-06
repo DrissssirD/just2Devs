@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Outfit:wght@300;600&display=swap');
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(178, 100%, 50%);}
+
+    .container{
+      max-width: 350px;
+      background-color: hsl(216, 50%, 16%);
+      font-family: 'Outfit', sans-serif;
+      border-radius: 15px;
+    }
+
+    .eth{color: hsl(178, 100%, 50%);}
+
+    .tdl{color: hsl(215, 51%, 70%);}
+
+    .nums{border-bottom: solid 1px hsl(215, 32%, 27%);}
+
+    .heading{
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+
+    .grey{
+      color: hsl(215, 51%, 70%);
+      font-weight: 300;
+    }
+
+    .name{color: white;}
+
+    .wrapper{height: 97vh;}
+
+    .myelement{
+      cursor: pointer;
+      transition: 0.5s;
+    }
+
+    .myelement:hover{color: hsl(178, 100%, 50%);}
+
+    #cardImage {position: relative;
+    cursor: pointer;}
+    #viewIcon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+    #overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: hsl(178, 100%, 50%);
+      z-index: 1;
+      opacity: 0.6;
+      border-radius: 5px;
+    }
+  .hidden{display: none;}
+
+  </style>
+</head>
+  <body style="background-color: hsl(217, 54%, 11%); color: white;">
+    <div class="wrapper d-flex align-items-center">
+      <div class="container p-4">
+        <div id="cardImage">
+          <img src="images/image-equilibrium.jpg" class="img-fluid rounded">
+          <img class="hidden" id="viewIcon" src="images/icon-view.svg">
+          <div id="overlay" class="hidden"></div>
+        </div>
+        <br>
+        <div class="row"><div class="heading myelement">Equilibrium #3429</div></div>
+        <br>
+        <div class="row">
+          <div class="col-12 grey">Our Equilibrium collection promotes balance and calm.</div>
+        </div>
+        <br>
+        <div class="nums d-flex justify-content-between pb-3 align-items-center">
+          <div class="eth d-flex align-items-center"><img src="images/icon-ethereum.svg" class="me-2"><span>0.041 ETH</span></div>
+          <div class="tdl d-flex align-items-center"><img src="images/icon-clock.svg" class="me-2"><span>3 days left</span></div>
+        </div>
+        <br>
+        <div class="d-flex">
+          <div class="me-3"><img class="rounded-circle" src="images/image-avatar.png" style="max-width: 35px; border: solid 1px white;" alt="avatar"></div>
+          <div class="grey align-self-center">Creation of <span class="name myelement">Jules Wyvern</span></div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://linkedin.com/in/nouraldeen-albakou/" target="_blank">Nouraldeen Albakoush</a>.
+    </div>
+    <script>
+      var overlay = document.getElementById('overlay');
+      var viewIcon = document.getElementById('viewIcon');
+      var card = document.getElementById('cardImage');
+
+      card.addEventListener('mouseenter', function(){
+        overlay.classList.toggle('hidden');
+        viewIcon.classList.toggle('hidden');
+      });
+      card.addEventListener('mouseleave', function(){
+        overlay.classList.toggle('hidden');
+        viewIcon.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>
