@@ -1,0 +1,99 @@
+:root{
+--White: hsl(0, 0%, 100%);
+--Grey: hsl(0, 0%, 20%);
+--DarkGrey: hsl(0, 0%, 12%);
+--OffBlack: hsl(0, 0%, 8%);
+--lightgrey: hsl(0, 0%, 80%);
+--green:hsl(75, 94%, 57%);
+}
+
+body{
+    font-family: "Inter",sans-serif;
+    background-color: var(--OffBlack);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+
+}
+
+
+.profile-card{
+    background-color: var(--DarkGrey);
+    border-radius: 0.7em;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+}
+
+.profile-picture{
+    width: 28%;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.title-name{
+    color:var(--White);
+    font-size: 1.4rem;
+    font-weight:600;
+    margin-bottom: 0.7rem;
+}
+
+.location{
+    color: var(--green);
+    font-size: 0.91rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.about{
+    color: var(--lightgrey);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.Social-platforms{
+    display: flex;
+    flex-direction: column;
+
+}
+.Social-platform{
+    background-color: var(--Grey);
+    color: var(--White);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    padding: 0.8rem;
+    margin: 0.41rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    width: 19rem;
+    
+}
+.Social-platform:hover{
+    background-color: var(--green);
+    color: black;
+
+}
+footer {
+    padding: 3px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column; 
+    position: fixed;
+    width: 100%;
+    height: 20px;
+    background-color: var(--Grey);
+    font-size: 100; 
+    text-align: center; 
+    bottom: 0px;
+    
+
+}
+.attribution a { color: hsl(228, 10%, 51%); }
+.attribution a:hover{color:var(--green)};
